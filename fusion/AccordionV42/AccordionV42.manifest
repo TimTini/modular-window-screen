@@ -1,0 +1,9 @@
+{
+  "autodeskProduct": "Fusion",
+  "type": "script",
+  "author": "",
+  "description": {"": "Parametric native Accordion V4.2 from finalized SCAD source; offline contract validated, Fusion runtime validation pending."},
+  "version": "4.2.0",
+  "supportedOS": "windows|mac",
+  "editEnabled": true
+}

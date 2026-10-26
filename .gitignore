@@ -1,0 +1,17 @@
+__pycache__/
+/work/
+/archive/
+/fusion/Accordion/
+/exports/audit.json
+verification/
+work/*.log
+work/*.off
+work/*.stl
+work/*.json
+work/positive-control.scad
+work/actuator-envelope.scad
+work/*-probe.scad
+work/*.png
+work/solid-height400/
+
+work/v4-audit/

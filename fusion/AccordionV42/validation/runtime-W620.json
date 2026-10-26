@@ -1,0 +1,263 @@
+{
+  "fusion_build": "2705.1.30",
+  "configuration": {
+    "width_mm": 620,
+    "clamp_travel_mm": 0
+  },
+  "counts": {
+    "components": 7,
+    "unique_bodies": 7,
+    "occurrences": 40,
+    "physical_solid_bodies": 40,
+    "native_thread_definitions": 6,
+    "physical_thread_segments": 10,
+    "timeline": 331,
+    "mesh_bodies": 0,
+    "base_features": 0
+  },
+  "timeline_issues": [],
+  "threads": [
+    {
+      "component": "AccordionV42 left_support",
+      "name": "Left male thread Thread TR20x4 7e",
+      "modeled": true,
+      "type": "ISO Metric Trapezoidal Threads",
+      "designation": "TR20x4",
+      "class": "7e",
+      "right_handed": true
+    },
+    {
+      "component": "AccordionV42 rod_shaft",
+      "name": "CT09 shaft joint male Thread TR20x4 7e",
+      "modeled": true,
+      "type": "ISO Metric Trapezoidal Threads",
+      "designation": "TR20x4",
+      "class": "7e",
+      "right_handed": true
+    },
+    {
+      "component": "AccordionV42 rod_shaft",
+      "name": "CT09 shaft tip male Thread TR20x4 7e",
+      "modeled": true,
+      "type": "ISO Metric Trapezoidal Threads",
+      "designation": "TR20x4",
+      "class": "7e",
+      "right_handed": true
+    },
+    {
+      "component": "AccordionV42 female_rotor",
+      "name": "Female rotor thread Thread TR20x4 7H",
+      "modeled": true,
+      "type": "ISO Metric Trapezoidal Threads",
+      "designation": "TR20x4",
+      "class": "7H",
+      "right_handed": true
+    },
+    {
+      "component": "AccordionV42 rod_socket",
+      "name": "CT09 socket front female Thread TR20x4 7H",
+      "modeled": true,
+      "type": "ISO Metric Trapezoidal Threads",
+      "designation": "TR20x4",
+      "class": "7H",
+      "right_handed": true
+    },
+    {
+      "component": "AccordionV42 rod_socket",
+      "name": "CT09 socket rear female Thread TR20x4 7H",
+      "modeled": true,
+      "type": "ISO Metric Trapezoidal Threads",
+      "designation": "TR20x4",
+      "class": "7H",
+      "right_handed": true
+    }
+  ],
+  "parts": [
+    {
+      "name": "AccordionV42 right_support",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 112584.34049085202,
+          "min_mm": [
+            -7.000000000000028,
+            0.0,
+            -47.3
+          ],
+          "max_mm": [
+            10.0,
+            250.0,
+            4.6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccordionV42 pin",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 2996.2885075748145,
+          "min_mm": [
+            -4.0,
+            -4.0,
+            0.0
+          ],
+          "max_mm": [
+            1.5000000000000002,
+            4.0,
+            250.00000000000003
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccordionV42 leaf",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 84675.26716586707,
+          "min_mm": [
+            -4.6,
+            0.0,
+            -4.5
+          ],
+          "max_mm": [
+            46.6,
+            250.0,
+            4.500000000000001
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccordionV42 left_support",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 137346.7992543348,
+          "min_mm": [
+            -10.0,
+            0.0,
+            -38.0
+          ],
+          "max_mm": [
+            175.0,
+            250.0,
+            4.599999999999995
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccordionV42 rod_shaft",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 28941.1351247592,
+          "min_mm": [
+            -14.000000000000002,
+            -7.000000000739974,
+            54.5
+          ],
+          "max_mm": [
+            14.000000000000002,
+            14.0,
+            187.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccordionV42 female_rotor",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 97348.51638410451,
+          "min_mm": [
+            -130.0,
+            107.0,
+            -47.3
+          ],
+          "max_mm": [
+            9.499999999999993,
+            143.0,
+            -12.000000000000002
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AccordionV42 rod_socket",
+      "bodies": [
+        {
+          "solid": true,
+          "volume_mm3": 37269.031402199456,
+          "min_mm": [
+            -16.0,
+            -12.499999999999996,
+            0.0
+          ],
+          "max_mm": [
+            16.0,
+            16.0,
+            74.5
+          ]
+        }
+      ]
+    }
+  ],
+  "assembly_precise_bounds_mm": {
+    "min": [
+      0.0,
+      -2.937374022976103e-16,
+      -48.0
+    ],
+    "max": [
+      620.0,
+      250.00000000000003,
+      23.51428031937776
+    ]
+  },
+  "parameters": {
+    "thread_offset": "-0.25 mm",
+    "male_bore_d": "2.0 mm"
+  },
+  "archive": {
+    "path": "fusion/AccordionV42/exports/AccordionV42-W620.f3d",
+    "bytes": 5852394,
+    "sha256": "7b020d844968d4af1850b2c4e7cb46cd8a97f557a2d71408ede5aafb681cbf69"
+  },
+  "source_hashes": {
+    "accordion.scad": "8f80b5382d7d36d020df508ff3d02a9bda6ee88b1fd4fec9c36ce78a013d3a57",
+    "threads.scad": "42435bb118dba9e9c5e102dfdd417187ab1366b9dfcbcc6b49b694e7a38b3da2"
+  },
+  "source_paths": {
+    "accordion.scad": "fusion/AccordionV42/reference/accordion.scad",
+    "threads.scad": "fusion/AccordionV42/reference/threads.scad",
+    "reference_stl": "fusion/AccordionV42/reference/accordion.stl"
+  },
+  "current_project_source": {
+    "path": "accordion.scad",
+    "sha256": "37792d9628d1cc6f9b8b15056bf7e5d23239294ec1a6040a1951b3d9e620d5b4",
+    "status": "later final revision; not used by this pinned runtime evidence"
+  },
+  "current_project_reference_mesh": {
+    "path": "exports/accordion.stl",
+    "sha256": "2ba95802e3db97be7956664c6b9389fe54987cdee7159392643261540b0a28c2",
+    "status": "later final export; not used by this pinned runtime evidence"
+  },
+  "package_hashes": {
+    "AccordionV42.py": "d4c7df82495ac8cc9aad49e04923de161acbf25c393cba438880cb889cf2a279",
+    "Contract.py": "ddc1ca02a344d879fc8fdac0affa991131725685810900209f8f2808a1e6ecfd",
+    "Geometry.py": "e0ec30eb87fa4fa138c4cff03328c8b698eaddbf8e045caf92ec006d0e77a94a",
+    "NativeThreads.py": "114e3aa4c6378c3b0565e73368ef2bf99e137909e60531b804da30feafcaacdd"
+  },
+  "archive_readback": {
+    "document": "Untitled",
+    "occurrences": 40,
+    "timeline": 331,
+    "solid_instances": 40,
+    "issues": []
+  }
+}

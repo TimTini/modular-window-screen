@@ -1,0 +1,11 @@
+{
+  "name": "modular-window-screen-mockup",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
+}

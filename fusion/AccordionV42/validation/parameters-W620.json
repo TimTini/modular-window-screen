@@ -1,0 +1,39 @@
+{
+  "fusion_build": "2705.1.30",
+  "baseline_volumes_mm3": {
+    "left_support": 137346.7992543348,
+    "rod_shaft": 28941.1351247592,
+    "rod_socket": 37269.031402199456
+  },
+  "male_bore_3mm": {
+    "volumes_mm3": {
+      "left_support": 136620.30595313164,
+      "rod_shaft": 28418.84534609992,
+      "rod_socket": 37269.031402199456
+    },
+    "left_axial_bore_radii_mm": [
+      1.4999999999999991
+    ]
+  },
+  "thread_offset_minus_0_4mm": {
+    "socket_bottom_y_mm": -12.650000000000002,
+    "nominal_bottom_wall_mm": 2.0000000000000018,
+    "volumes_mm3": {
+      "left_support": 135107.9692795427,
+      "rod_shaft": 27416.926363645343,
+      "rod_socket": 36746.58471721737
+    }
+  },
+  "restored_baseline": {
+    "parameters": {
+      "male_bore_d": "2.0 mm",
+      "thread_offset": "-0.25 mm"
+    },
+    "timeline_issues": [],
+    "volumes_mm3": {
+      "left_support": 137346.7992543348,
+      "rod_shaft": 28941.1351247592,
+      "rod_socket": 37269.031402199456
+    }
+  }
+}

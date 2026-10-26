@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "package": "AccordionV42",
+  "version": "4.2.0",
+  "source": {
+    "root": "reference/accordion.scad",
+    "dependency": "reference/threads.scad",
+    "reference_mesh": "reference/accordion.stl",
+    "revision": "V4.2 pinned pre-female32 baseline",
+    "revision_role": "self-contained historical input snapshot for the recorded Fusion evidence",
+    "sha256": {
+      "accordion.scad": "8f80b5382d7d36d020df508ff3d02a9bda6ee88b1fd4fec9c36ce78a013d3a57",
+      "threads.scad": "42435bb118dba9e9c5e102dfdd417187ab1366b9dfcbcc6b49b694e7a38b3da2",
+      "reference_stl": "820485a4f9a147d9425e106d44faefb213f56c3d8eeb758a150e6e69cb247ee1"
+    },
+    "hashes_verified_in_session": true,
+    "reference_mesh_role": "pinned reference only; never imported as native design geometry",
+    "current_project_source": {
+      "path": "../../accordion.scad",
+      "sha256": "37792d9628d1cc6f9b8b15056bf7e5d23239294ec1a6040a1951b3d9e620d5b4",
+      "status": "later final revision; not used by this pinned handoff"
+    },
+    "current_project_reference_mesh": {
+      "path": "../../exports/accordion.stl",
+      "sha256": "2ba95802e3db97be7956664c6b9389fe54987cdee7159392643261540b0a28c2",
+      "status": "later final export; not used by this pinned handoff"
+    }
+  },
+  "baseline": {
+    "width_mm": 620,
+    "height_mm": 250,
+    "expected_counts": {
+      "component_definitions": 7,
+      "body_definitions": 7,
+      "occurrence_instances": 40,
+      "print_pieces": 40,
+      "physical_thread_segments": 10,
+      "native_thread_feature_definitions": 6
+    },
+    "thread_roles": [
+      "left_male",
+      "rotor_female",
+      "socket_front_female_0",
+      "socket_rear_female_0",
+      "shaft_joint_male_0",
+      "shaft_tip_male_0",
+      "socket_front_female_1",
+      "socket_rear_female_1",
+      "shaft_joint_male_1",
+      "shaft_tip_male_1"
+    ],
+    "runtime_actual": {
+      "status": "pass",
+      "component_definitions": 7,
+      "body_definitions": 7,
+      "occurrence_instances": 40,
+      "physical_thread_segments": 10,
+      "native_thread_feature_definitions": 6,
+      "timeline": 331,
+      "unhealthy_timeline_items": 0,
+      "physical_solid_bodies": 40
+    },
+    "runtime_count_note": "Fusion 2705.1.30 W620 measured 7 unique solid BRep bodies, 40 occurrences, 6 modeled native Thread definitions and 10 physical Thread instances. Other widths remain not_run in Fusion."
+  },
+  "parameters": {
+    "live_user_parameters": {
+      "thread_offset": {
+        "source_name": "thread_offset_mm",
+        "unit": "mm",
+        "default": -0.25,
+        "domain": "-0.4..-0.1 mm"
+      },
+      "male_bore_d": {
+        "source_name": "male_bore_d_mm",
+        "unit": "mm",
+        "default": 2.0,
+        "domain": "positive bore with source thread-core wall guards"
+      }
+    },
+    "run_values": [
+      "clamp_travel_mm",
+      "thread_offset_mm",
+      "pip_gap_mm",
+      "leaf_bottom_mm",
+      "leaf_top_mm",
+      "support_web_width_mm",
+      "male_bore_d_mm",
+      "joint_angle_deg"
+    ],
+    "rebuild_only_run_values": [
+      "clamp_travel_mm",
+      "pip_gap_mm",
+      "leaf_bottom_mm",
+      "leaf_top_mm",
+      "joint_angle_deg",
+      "support_web_width_mm"
+    ],
+    "rebuild_required_for_run_configuration": true,
+    "width": {
+      "source_name": "width_mm",
+      "default_mm": 620,
+      "domain": "430..1000 mm",
+      "mode": "run_only",
+      "change_parameter": false
+    }
+  },
+  "evidence": {
+    "offline_source_and_contract_tests": {
+      "status": "pass",
+      "scope": "source hashes, source formulas, topology, geometry, native adapter and fake orchestration contracts",
+      "test_count": 68,
+      "command": "python -m unittest discover -s fusion/AccordionV42/tests -q"
+    },
+    "offline_py_compile": {
+      "status": "pass",
+      "scope": "V4.2 Python source",
+      "command": "python -m compileall -q fusion/AccordionV42"
+    },
+    "fusion_native_timeline_brep": {
+      "status": "pass",
+      "scope": "W620 baseline counts, native solid bodies, modeled TR20x4 7e/7H RH metadata, timeline health and one rod-axis placement witness; full source geometry parity and other widths not_run",
+      "fusion_build": "2705.1.30",
+      "audit": "validation/runtime-W620.json"
+    },
+    "fusion_recompute": {
+      "status": "pass",
+      "scope": "W620 male_bore_d 2->3->2 mm and thread_offset -0.25->-0.4->-0.25 mm; final baseline volume restored within 0.01 mm3 and no unhealthy timeline items",
+      "audit": "validation/parameters-W620.json"
+    },
+    "fusion_export": {
+      "status": "pass",
+      "scope": "Native F3D export and Fusion import/readback: 40 solid instances, timeline331, no unhealthy items; STEP/STL not_run",
+      "artifact": "exports/AccordionV42-W620.f3d",
+      "sha256": "7b020d844968d4af1850b2c4e7cb46cd8a97f557a2d71408ede5aafb681cbf69"
+    },
+    "physical": {
+      "status": "not_run",
+      "reason": "No print, fit or assembly trial was run"
+    }
+  },
+  "open_findings": [
+    "Full SCAD/Fusion section, interference and thread-phase fidelity matrix remains not_run; native rebuilds at widths other than W620 and physical fit remain not_run."
+  ],
+  "run_install": {
+    "install": "Fusion > Utilities > Add-Ins > Scripts and Add-Ins > Scripts; add fusion/AccordionV42 as a script folder.",
+    "run": "Run AccordionV42. Each run creates a fresh unsaved Accordion V4.2 document.",
+    "width": "Set RUN_WIDTH_MM in AccordionV42.py before running. Width changes rebuild topology, lengths, placements and phase.",
+    "offline_tests": "python -m unittest discover -s fusion/AccordionV42/tests -q",
+    "offline_compile": "python -m compileall -q fusion/AccordionV42"
+  }
+}

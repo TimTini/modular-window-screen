@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101817">
+  <title>Cụm cửa gấp · mô hình tương tác</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    window.addEventListener('error', event => {
+      if (event.target instanceof HTMLScriptElement && event.target.type === 'module') {
+        const box = document.querySelector('#error');
+        if (box) {
+          box.hidden = false;
+          box.textContent = 'Không tải được mô-đun 3D. Hãy chạy máy chủ HTTP cục bộ và kiểm tra đã cài Three.js.';
+        }
+      }
+    }, true);
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js",
+        "three/addons/": "./node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main class="layout">
+    <section class="stage" aria-label="Mô hình 3D cụm cửa gấp">
+      <div id="viewport"></div>
+      <div class="stage-top"><span class="eyebrow">MÔ HÌNH ĐỘNG HỌC</span><span class="grip">KÉO ĐỂ XOAY · LĂN ĐỂ PHÓNG</span></div>
+      <div id="error" class="error" role="alert" hidden></div>
+      <div class="stage-bottom"><span>01 — CỤM MẪU · 12 LÁ</span><span id="view-label">GÓC PHỐI CẢNH</span></div>
+    </section>
+
+    <aside class="panel">
+      <header>
+        <div class="brand"><span class="brand-mark">↗</span><span>FORM / <b>FOLD</b></span><span class="version">CONCEPT 01</span></div>
+        <p class="eyebrow">CƠ CẤU THU GỌN · 3 BẢN LỀ + 2 GỐI BIÊN</p>
+        <h1>Cửa gấp<br><em>một cụm</em></h1>
+        <p class="intro">Một tư thế hình học để khảo sát bố trí tấm và cơ cấu ren.</p>
+      </header>
+
+      <section class="control-block">
+        <div class="control-heading"><label for="width">Chiều rộng cụm</label><output id="width-value">500 <small>mm</small></output></div>
+        <input id="width" type="range" min="430" max="500" step="1" value="500" aria-label="Chiều rộng cụm">
+        <div class="range-labels"><span>430 mm</span><span>500 mm</span></div>
+        <div class="presets" aria-label="Kích thước nhanh">
+          <button type="button" data-width="430">430</button><button type="button" data-width="465">465</button><button type="button" class="selected" data-width="500">500 <small>MAX</small></button>
+        </div>
+      </section>
+
+      <section class="measurements" aria-label="Thông số cơ cấu">
+        <div><span>ĐỘ ĂN KHỚP DANH NGHĨA</span><strong id="overlap">30 <small>mm</small></strong></div>
+        <div><span>VÒNG TỪ MỐC 500 mm</span><strong id="turns">0 <small>vòng</small></strong></div>
+        <div><span>BƯỚC TRỤC BẢN LỀ</span><strong>42 <small>mm</small></strong></div>
+        <div><span>ĐỘ SÂU GẤP</span><strong id="fold-depth">12.8 <small>mm</small></strong></div>
+        <div><span>KHE HƯỚNG KÍNH PIP</span><strong>0.6 <small>mm</small></strong></div>
+      </section>
+
+      <section class="control-block view-controls">
+        <div class="section-title">GÓC NHÌN <span>01 / 03</span></div>
+        <div class="view-buttons"><button type="button" data-view="front">Mặt trước</button><button type="button" data-view="top">Nhìn trên</button><button type="button" data-view="iso" class="selected">Phối cảnh</button></div>
+      </section>
+
+      <section class="switches">
+        <label><input id="show-panels" type="checkbox" checked><span class="switch"></span><span>Hiện 12 tấm</span></label>
+        <label><input id="cutaway" type="checkbox" checked><span class="switch"></span><span>Mặt cắt PIP · in liền nhựa</span></label>
+      </section>
+
+      <section class="legend">
+        <div class="section-title">THÀNH PHẦN <span>12 LÁ</span></div>
+        <div class="legend-row"><i class="swatch panel-swatch"></i><span>12 tấm đặc · rộng ngoài 50 mm · H 200 mm</span></div>
+        <div class="legend-row"><i class="swatch hinge-swatch"></i><span>11 bản lề + 2 chốt biên</span></div>
+        <div class="legend-row"><i class="swatch rod-swatch"></i><span>Thanh trái 175 mm + đoạn nối 230 mm · đầu ren 110 mm</span></div>
+        <div class="legend-row"><i class="swatch sleeve-swatch"></i><span>Rotor captive PIP · thân 130 + đuôi 10 mm</span></div>
+      </section>
+
+      <footer><strong>Giới hạn mô hình</strong><p>Khớp phải là PIP, khe danh nghĩa 0.6 mm. Hình học minh họa; chưa thử slicer, support hay in/lắp thực tế.</p><span>DESIGN STUDY <b>·</b> 19 OCT 2026</span></footer>
+    </aside>
+  </main>
+</body>
+</html>
