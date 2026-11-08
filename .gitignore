@@ -3,6 +3,13 @@ __pycache__/
 /archive/
 /fusion/Accordion/
 /exports/audit.json
+# Local WIP mesh dumps; canonical tracked exports stay published.
+/exports/Assembly.3mf
+/exports/accordion-v4.2.stl
+/exports/accordion620.3mf
+/exports/accordion620.stl
+/fusion/AccordionV42/.vscode/
+/docs/superpowers/
 verification/
 work/*.log
 work/*.off
